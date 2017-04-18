@@ -49,20 +49,23 @@
      
      ![新建仓库](./pic/gradle/pic3.png)
  
- 3.  点击刚刚新建的仓库，再点击adb new package添加package（ ）
+ 3.  点击刚刚新建的仓库，再点击adb new package添加package（ version control 建议用github ）
      
      ![package](./pic/gradle/pic2.png)
      
      ![package](./pic/gradle/pic4.png)
   
  4.  在项目根build.gradle添加
+ 
      classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+ 
      classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.5"
   
  5.  在lib下面新建uploadjcenter.gradle（具体配置代码）
      需要在lib下新建local.properies加入两行
      *  bintray.user=xxxxxxxx  (bintray的用户名)
      *  bintray.apikey=xxxxxxxxxx（bintray--edit profie----apikey）
+     
      在build.gradle增加一行 apply from: 'uploadjcenter.gradle'
      
  6.  在as----terminal下运行
@@ -76,7 +79,7 @@
      
      ![package](./pic/gradle/pic5.png)
      
- 8.  点击页面右下方的 add to jcenter   发布到jcenter(大概一天过审核，审核后才能像其他类库一样应用)
+ 8.  点击页面右下方的 add to jcenter   发布到jcenter(大概一天过审核，审核后才能像其他类库一样可以依赖)
     
      add to jcenter的时候，下面的框不用勾
      
