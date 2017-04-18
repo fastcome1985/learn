@@ -61,12 +61,11 @@
  
      classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.5"
   
- 5.  在lib下面新建uploadjcenter.gradle（具体配置代码）
-     需要在lib下新建local.properies加入两行
+ 5.  在lib下面新建uploadjcenter.gradle（具体配置见代码）
+     需要在lib下新建local.properies并加入两行
      *  bintray.user=xxxxxxxx  (bintray的用户名)
      *  bintray.apikey=xxxxxxxxxx（bintray--edit profie----apikey）
-     
-     在build.gradle增加一行 apply from: 'uploadjcenter.gradle'
+     *  在build.gradle增加一行 apply from: 'uploadjcenter.gradle'
      
  6.  在as----terminal下运行
       ./gradlew install 
