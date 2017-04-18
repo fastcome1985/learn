@@ -37,7 +37,7 @@
 
 #### 一、上传到jcenter
     
-    见lib/uploadjcenter.gradle（要在在build.gradle中apply from）
+    见lib/uploadjcenter.gradle（要在build.gradle中apply from）
     
     
     
