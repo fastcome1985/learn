@@ -1,0 +1,76 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    testCompile 'junit:junit:4.12'
+}
+
+
+//ext {
+//    bintrayRepo = 'maven'
+//    bintrayName = 'commonlib'
+//
+//    publishedGroupId = 'com.fastcome1985.lib'
+//    libraryName = 'commonlib'
+//    artifact = 'lib'
+//
+//    libraryDescription = 'commonlib'
+//
+////    siteUrl = 'https://github.com/nuuneoi/FBLikeAndroid'
+////    gitUrl = 'https://github.com/nuuneoi/FBLikeAndroid.git'
+//
+//    libraryVersion = '0.0.1'
+//
+//    developerId = 'luojianxiang'
+//    developerName = 'luojianxiang'
+//    developerEmail = 'luojianxiang05@gmail.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+//
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+////导入其他gradle文件
+//apply from: 'upload.gradle'
+
+//apply plugin: 'com.novoda.bintray-release'
+//
+//publish {
+//    userOrg = 'luojianxiang05' //你的用户名
+//    groupId = 'com.fastcome1985.lib' //你的唯一的groupId，对应com.squareup.okhttp3:okhttp:3.4.1中的com.squareup.okhttp3
+//    artifactId = 'common_lib' //你的library的名字，对应com.squareup.okhttp3:okhttp:3.4.1中的okhttp
+//    publishVersion = '0.0.1' //版本号
+//    desc = 'This is a demo library to teach how to publish you own library to jcenter with android studio.'
+//    website = 'http://www.starlinkings.com/' //建议填写github地址，不过不影响，这里做演示填的自己的网址
+//
+//    bintrayUser = 'luojianxiang05' //你的用户名
+//    bintrayKey = 'eb70a49a1e62b0f9674a16937294fd1ab3522f0e' //在你的账户里面查找
+//}
