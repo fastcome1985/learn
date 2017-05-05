@@ -109,13 +109,16 @@
     
    1. 第一步 在AndroidManifest.xml里配置PlaceHolder
     
-    `  <meta-data
+    ```
+      <meta-data
          android:name="UMENG_CHANNEL"
-         android:value="${UMENG_CHANNEL_VALUE}" />`
+         android:value="${UMENG_CHANNEL_VALUE}" />
+    ```
          
    2. 在build.gradle设置productFlavors
    
-   `productFlavors {
+   ```
+    productFlavors {
             xiaomi {}
             _360 {}
             baidu {}
@@ -124,7 +127,7 @@
     productFlavors.all { 
             flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] 
         }
-   `
+   ```
    
    3. 直接执行 ./gradlew assembleRelease
 
