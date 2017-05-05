@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.fastcome1985.lib.Test;
+
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Test.test();
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,24 +32,24 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
-                String path="/storage/sdcard1/drivingrecorder";
-                File f=new File(path);
-                boolean flag=f.mkdirs();
-                if(flag){
-                    Log.i("ljx","success ==============");
-                }else{
-                    Log.i("ljx","fail ==============");
+                String path = "/storage/sdcard1/drivingrecorder";
+                File f = new File(path);
+                boolean flag = f.mkdirs();
+                if (flag) {
+                    Log.i("ljx", "success ==============");
+                } else {
+                    Log.i("ljx", "fail ==============");
                 }
             }
         });
 
-        String path="/storage/sdcard1/drivingrecorder";
-        File f=new File(path);
-        boolean flag=f.mkdirs();
-        if(flag){
-            Log.i("ljx","success ==============");
-        }else{
-            Log.i("ljx","fail ==============");
+        String path = "/storage/sdcard1/drivingrecorder";
+        File f = new File(path);
+        boolean flag = f.mkdirs();
+        if (flag) {
+            Log.i("ljx", "success ==============");
+        } else {
+            Log.i("ljx", "fail ==============");
         }
     }
 

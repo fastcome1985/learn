@@ -31,5 +31,7 @@ dependencies {
 }
 
 //导入其他gradle文件
-apply from: 'uploadjcenter.gradle'
+//apply from: 'uploadjcenter.gradle'
+
+apply from: 'uploadnative.gradle'
 

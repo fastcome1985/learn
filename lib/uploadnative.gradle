@@ -8,14 +8,15 @@ uploadArchives {
                 artifactId project.ARTIFACT_ID
                 version project.VERSION
             }
-            if (true) {
-                repository(url: project.RELEASE_REPOSITORY_URL) {
-                    authentication(userName: project.USERNAME, password: project.PASSWORD)
-                }
-            } else {
-                snapshotRepository(url: project.SNAPSHOT_REPOSITORY_URL) {
-                    authentication(userName: project.USERNAME, password: project.PASSWORD)
-                }
+
+            repository(url: project.RELEASE_REPOSITORY_URL) {
+                System.out.println("111111111")
+                authentication(userName: project.USERNAME, password: project.PASSWORD)
+            }
+
+            snapshotRepository(url: project.SNAPSHOT_REPOSITORY_URL) {
+                System.out.println("22222222")
+                authentication(userName: project.USERNAME, password: project.PASSWORD)
             }
         }
     }

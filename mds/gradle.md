@@ -71,7 +71,7 @@
       ./gradlew install 
       如成功  接着运行
       ./gradlew bintrayUpload
- 
+      （不行的话  需要先chmod 755 gradlew）
      
  7.  上传成功后在后台可以看到上传的项目
       
@@ -85,6 +85,24 @@
      ![package](./pic/gradle/pic6.png)
      
      
+#### 二、上传到本地maven仓库
+
+   1.  本地maven仓库nexus搭建见doc/nexus
+   2.  上传代码见lib/uploadnative.gradle
+   3.   在lib/gradle.properties添加（不存在则创建）
+        GROUP_ID=com.fastcome1985.lib
+        ARTIFACT_ID=luo
+        VERSION=0.0.5-SNAPSHOT
+        RELEASE_REPOSITORY_URL=http://172.23.132.67:8081/repository/ljxrelease/
+        SNAPSHOT_REPOSITORY_URL=http://172.23.132.67:8081/repository/ljxsnapshot3/
+        USERNAME=ttt
+        PASSWORD=ttt
+        
+        注：VERSION=0.0.5-SNAPSHOT，带-SNAPSHOT会传到SNAPSHOT_REPOSITORY_URL，不带则是release
+     
+
+
+### 多渠道打包     
      
      
      

@@ -15,7 +15,11 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven {
+            url "http://172.23.132.67:8081/repository/ljxrelease/"
+        }
     }
+
 }
 
 task clean(type: Delete) {

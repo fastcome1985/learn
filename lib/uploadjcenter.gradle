@@ -2,8 +2,6 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-// 项目引用的版本号，比如compile 'com.fastcome1985.lib:common:0.0.1'中的1.0.1就是这里配置的。
-version = "0.0.2"
 
 // 定义两个链接，下面会用到。
 def siteUrl = 'https://github.com/fastcome1985/learn' // 项目主页。
@@ -74,6 +72,10 @@ artifacts {
 // 这里是读取Bintray相关的信息，我们上传项目到github上的时候会把gradle文件传上去，所以不要把帐号密码的信息直接写在这里，写在local.properties中，这里动态读取。
 Properties properties = new Properties()
 properties.load(project.file('local.properties').newDataInputStream())
+
+// 项目引用的版本号，比如compile 'com.fastcome1985.lib:common:0.0.1'中的1.0.1就是这里配置的。
+version = properties.getProperty("version")
+
 bintray {
     user = properties.getProperty("bintray.user") // Bintray的用户名。
     key = properties.getProperty("bintray.apikey") // Bintray刚才保存的ApiKey。
