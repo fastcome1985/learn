@@ -100,9 +100,38 @@
         
         注：VERSION=0.0.5-SNAPSHOT，带-SNAPSHOT会传到SNAPSHOT_REPOSITORY_URL，不带则是release
      
+   4. 双击右边的upload/uploadArchives  就可以上传了
+
+#### 三、遗留问题
+   1.  上传到jcenter 与本地仓库不能一起用，会编译不过
+
+### 多渠道打包    
+    
+   1. 第一步 在AndroidManifest.xml里配置PlaceHolder
+    
+    `  <meta-data
+         android:name="UMENG_CHANNEL"
+         android:value="${UMENG_CHANNEL_VALUE}" />`
+         
+   2. 在build.gradle设置productFlavors
+   
+   `productFlavors {
+            xiaomi {}
+            _360 {}
+            baidu {}
+            wandoujia {}
+        }  
+    productFlavors.all { 
+            flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] 
+        }
+   `
+   
+   3. 直接执行 ./gradlew assembleRelease
 
 
-### 多渠道打包     
+
+    
+     
      
      
      
