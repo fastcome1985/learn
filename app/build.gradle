@@ -76,8 +76,8 @@ dependencies {
     compile 'com.android.support:design:25.2.0'
     compile rootProject.ext.dependencies.cardviewv7
     compile rootProject.ext.dependencies.supportv7
-    compile project(':lib')
-//    compile 'com.fastcome1985.lib:luo:0.0.5'
+//    compile project(':lib')
+    compile 'com.fastcome1985.lib:luo:0.0.5'
     compile 'com.google.code.gson:gson:2.8.0'
 
 

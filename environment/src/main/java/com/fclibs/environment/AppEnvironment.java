@@ -1,4 +1,4 @@
-package com.fastcome1985.environmentlib;
+package com.fclibs.environment;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;

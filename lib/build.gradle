@@ -22,7 +22,8 @@ android {
 }
 
 dependencies {
-    compile project(':environmentlib')
+    compile project(':environment')
+//      compile 'com.fastcome1985.lib.environment:luo:0.1.0'
 }
 
 //导入其他gradle文件
