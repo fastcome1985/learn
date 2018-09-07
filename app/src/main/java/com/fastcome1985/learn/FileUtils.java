@@ -3,6 +3,8 @@ package com.fastcome1985.learn;
 import android.content.Context;
 import android.os.Environment;
 
+import java.util.HashMap;
+
 /**
  * Created by luojianxiang on 17/5/27.
  */
@@ -19,6 +21,9 @@ public class FileUtils {
         if (isSDCardEnable()) {
             return Environment.getExternalStorageDirectory().getAbsolutePath();
         } else {
+            HashMap<String,String> hashMap=new HashMap<>();
+
+            hashMap.put("11","111");
             return context.getFilesDir().getAbsolutePath();
         }
     }

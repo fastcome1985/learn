@@ -282,7 +282,7 @@
          
    2. 在build.gradle设置productFlavors
    
-   ```
+    ```
     productFlavors {
             xiaomi {}
             _360 {}
@@ -292,7 +292,7 @@
     productFlavors.all { 
             flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] 
         }
-   ```
+    ```
    
    3. 直接执行 ./gradlew assembleRelease
 
